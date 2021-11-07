@@ -1,11 +1,25 @@
 body {
-   background-color: aqua;
+   /* background-color: aqua; */
 }
 
 h1 {
-   padding-top : 60px;
+   padding-top: 60px;
    padding-left: 80px;
 }
+
 .input-group {
    padding-top: 100px;
+}
+
+.one {
+   background-color: blue;
+   padding: 50px;
+}
+
+.two {
+   background: chocolate;
+}
+
+.three {
+  border: 3px solid rgb(223, 13, 13);
 }
