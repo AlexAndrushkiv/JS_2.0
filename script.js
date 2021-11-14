@@ -422,11 +422,11 @@ const b = [
 
 // }
 
-//* --Lesson 17 --- Методы массивов -- MAP, Filter (part 1)
+//* --Lesson 17 ---/ Методы массивов  MAP, Filter (part 1) /---
 //*предназначена для обрабртки каждого элемента массива(умножить,делить)
 //*и после возвратить результат
 
-let a = [4, 5, 7, 200, 1, 0, -5];
+// let a = [4, 5, 7, 200, 1, 0, -5];
 
 //вывод элементов масива(item)
 // let b = a.map(function(item, index) {
@@ -443,7 +443,7 @@ let a = [4, 5, 7, 200, 1, 0, -5];
 // })
 // console.log(i);
 
-//перемножить все элемента массива
+// перемножить все элемента массива
 // let i = a.map(function (item, index) {
 //    return item * 5;
 
@@ -453,3 +453,294 @@ let a = [4, 5, 7, 200, 1, 0, -5];
 //-----method Filter
 //-----перебор елементов массива которые прошли определённое условие и работа с этими элементами
 //
+// let c = a.filter((item, index) => {
+// if(item % 2 == 0) return true;
+// if(item > 0) return true;
+// if(item < 0) return true;
+// })
+// console.log(c);
+
+//*--Lesson 18 --/ Методы массивов -- Split, Join, ForEach(part 2) /--
+//---Method Split(разбивает массив 'String' на массив строк путём разделения указанной подстрокой(прим. ','))
+// let a = 'hello,attantion,buu';
+// console.log(a.split(','));
+
+//---Method join(объед. массива  в строку)
+// let b = [5, 8, 3];
+
+// console.log(b);
+// console.log(b.join('-'));//separator
+
+//--Method ForIech (метод, который применяет функцию один раз к указанному элементу)
+
+// b.forEach(function (elem, index) {
+//    console.log(index);
+//    console.log(elem = elem * 2);
+//    console.log('--');
+// })
+// console.log(b);
+
+//* -- Lesson 19 --/ События мышы /---------------------------
+// document.querySelector('.two').onclick = (event) => {
+//    // console.log(event);
+//    console.log('click');
+// }
+
+// document.querySelector('.two').ondblclick = () => {
+//    console.log('dblclick');
+// }
+
+// document.querySelector('.two').oncontextmenu = () => {
+//    console.log('right click');
+// }
+
+// let h = 60;
+// document.querySelector('.two').onmousemove = () => {
+//    document.querySelector('.two').style.height = h + 'px';
+//    h++;
+//    console.log('true');
+// }
+
+/* block-------
+document.querySelector('.two').onmouseenter = () => {
+   document.querySelector('.two').style.background = 'black';
+   console.log('1');
+}
+
+document.querySelector('.two').onmouseleave = () => {
+   document.querySelector('.two').style.background = 'green';
+   console.log('2');
+}
+document.querySelector('.two').onmousedown = () => {
+   document.querySelector('.two').style.background = 'orange';
+   console.log('3');
+}
+document.querySelector('.two').onmouseup = () => {
+   document.querySelector('.two').style.background = 'blue';
+   console.log('4');
+}
+*/
+
+//* -- Lesson 20 --/  События клавиатуры в JS /----------------------
+//при изменении в  поле инпута отрабатывает событие onimput
+// document.querySelector('.i-1').oninput = (event) => {
+//    console.log(1);
+//    console.log(event);
+// }
+
+// document.querySelector('.i-1').onkeypress = (event) => {
+//    console.log('keyPress');
+//    console.log('charCode: ' + event.charCode);
+//    console.log('code: ' + event.code);
+//    console.log('key: ' + event.key);
+//    console.log('keyCode: ' + event.keyCode);
+
+// }
+
+// document.querySelector('.i-1').onkeydown = (event) => {
+//    console.log('keyDown');
+//    console.log('charCode: ' + event.charCode);
+//    console.log('code: ' + event.code);
+//    console.log('key: ' + event.key);
+//    console.log('keyCode: ' + event.keyCode);
+
+// }
+
+//*-- Lesson 21 --/ Краткий обзор Touch событий /-----------
+// document.querySelector('.block-1').addEventListener('touchstart', myTouch);
+
+// function myTouch(event) {
+//    console.log(event);
+//    console.log('touch');
+//    document.querySelector('.out-1').innerHTML += 'work';
+// }
+//! Разобрал весь урок, но задания перенёс не все/--дополнить при учёбе
+
+//* --Lesson 22 --/ Обрабатываем ошибки с помощью Try Catch /----
+// let a = 13;
+// a *= 2;
+// //код помещённый в трай(вызывающий ошибку пропускается) и далее вся программа продолжает работу(так можно отловить больше багов)
+// try {
+//    document.querySelector('.test').innerHTML = a;
+// } catch {
+//    // alert();
+//    console.log('attantion');
+
+// }
+// //блок выполнится в любом случае
+// finally {
+//    console.log('');
+// }
+
+// t1();
+
+// function t1() {
+//    console.log('Buu!!!');
+// }
+
+//* -- Lesson 23 --/ Local-Storage. Сохраняем всё /--------------
+//Хранилище данных которое присутствует в браузере
+
+// localStorage.setItem('data', 7);
+// console.log(localStorage.getItem('data'));
+
+// const a = [4, 5, 6, 7];
+
+// localStorage.setItem('arr', JSON.stringify(a));
+
+// let b = localStorage.getItem('arr');
+// b = JSON.parse(b);
+// console.log(b);
+// console.log(b[2]);
+// console.log(typeof b);
+
+//работа с ассоциативным массивом
+// const c = {
+//    hello: 5,
+//    k: 2,
+//    4: 'Hi'
+// };
+// localStorage.setItem('arr', JSON.stringify(c));
+// let d = localStorage.getItem('arr');
+// d = JSON.parse(d);
+// console.log(d);
+// console.log(typeof d);
+
+//*-- Lesson 24 --/ Работа с POST && GET запросами /------------------
+//Выполнять задание после преобретения курса
+
+//* -- Lesson 25 ---/ AJAX Асинхронный JS /----------------
+//метод отправки запроса на сервер в фоновом режиме и работы с сервером
+
+//обьект XMLHttpRequest (создание запроса)
+// let xhttp = new XMLHttpRequest();
+// let a = 0;
+
+// //при изменении состояния запроса запустить функцию
+// xhttp.onreadystatechange = function () {
+//    if (this.readyState == 4 && this.status == 200) {
+//       myFunction(this.responseText)
+//    }
+// }
+//метод отправки запроса(-способ отправки запроса, -адресс отправки запроса
+//третий параматр не обязательный(true/false)- говорит как будет отправлен запрос
+//синхронно или асинхронно(читать документацию по XMLHttpRequest() ))
+
+// xhttp.open("GET", "http://getpost.itgid.info/index2.php", true);
+// xhttp.send();
+
+// //сама функция
+// function myFunction(data) {
+//    console.log(data);
+// }
+
+// let xhttp2 = new XMLHttpRequest();
+// //при изменении состояния запроса запустить функцию
+// xhttp2.onreadystatechange = function () {
+//    if (this.readyState == 4 && this.status == 200) {
+//       myFunction2(this.responseText)
+//    }
+// }
+
+// xhttp2.open("POST", "http://getpost.itgid.info/index2.php", true);
+
+// //конфигурация заголовков запроса
+// xhttp2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+// //параметры передачи запроса
+// xhttp2.send();
+
+// //сама функция
+// function myFunction2(data) {
+//    a = data;
+//    console.log(data);
+// }
+
+//* -- Lesson 26 --/ Учим FETCH на практике /--------------------------
+//1й параметр(адресс запроса) 2й (обработчик результата ответа)
+//fetch возвращает promise
+
+fetch("http://getpost.itgid.info/index2.php");
+//выполняется после обработки запроса
+// .then(data => {
+//    console.log(data);
+//    // data.text().then(data => {
+//    //    console.log(data);
+//    // })
+//    return data.text();
+// })
+// .then(data => {
+//    console.log(data);
+// });
+//из учебника MDN mazila
+/*
+fetch("http://getpost.itgid.info/index2.php", {
+   method: 'POST', // GET, POST, PUT, DELETE, etc.
+   mode: 'cors', // no-cors, *cors, same-origin
+   cache: 'no-cache', // default, no-cache, reload, force-cache, only-if-cached
+   credentials: 'same-origin', // include, *same-origin, omit
+   headers: {
+      //'Content-Type': 'application/json'
+       'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   redirect: 'follow', // manual, *follow, error
+   referrerPolicy: 'no-referrer', // no-referrer, *client
+   body: JSON.stringify(), // body data type must match "Content-Type" header
+})
+.then(response => response.text()) // parses JSON response into native JavaScript objects
+.then(response => {
+   console.log(response);
+}); // parses JSON response into native JavaScript objects
+*/
+
+//* ---- Lesson 27 --/ Работаем с промисами (Promise) /-----------------
+/*
+let a = new Promise((resolve, reject) => {
+   fetch("http://getpost.itgid.info/index2.php")
+      .then((data) => {
+         resolve(data.text());
+      })
+});
+
+let b = new Promise((resolve, reject) => {
+   fetch("http://getpost.itgid.info/index2.php")
+      .then((data) => {
+         resolve(data.text());
+      })
+});
+
+Promise.all([a, b]).then(value => {
+   console.log(value);
+   console.log(value[0]);
+   console.log(value[1]);
+})
+*/
+
+//* -- Lesson 28 --/ ООП в ES6 /------------------------------
+//Изучение понятия класс в ES6(MDN)
+//Разобрать тему и код с урока после изучения материалов
+
+//* -- Lesson 29 --/ Замыкания /------------------------------
+/*
+//замыкание это счётчик для переменной, в области видимости функции  
+function t1() {
+   let a = 0;//переменная в области видимости функции
+   return function () {
+      a += 1;
+      return a;
+   }
+}
+
+let b = t1();
+let c = t1();
+
+console.log(b);
+console.log(b());//1
+a = 44;//функция не видит эти переменную
+console.log(b());//2
+console.log(c());//1
+console.log(c());//2
+console.log(b());//3
+console.log(c());//3
+*/
+
+//* -- Lesson 30 --/ Рекурсия /------------------------------
