@@ -1,0 +1,29 @@
+body {
+   background-color: rgb(153, 252, 252);
+}
+
+h1 {
+   padding-top: 60px;
+   padding-left: 80px;
+}
+
+.input-group {
+   padding-top: 100px;
+}
+
+.one {
+   background: rgb(208, 73, 73);
+}
+
+.two {
+   background: orange;
+}
+
+.three {
+   border: 6px solid red;
+
+}
+
+.out-3 {
+   background: orange;
+}
